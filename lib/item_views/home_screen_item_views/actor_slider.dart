@@ -1,10 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_app_poc/constants/dimens.dart';
+import 'package:movie_app_poc/constants/strings.dart';
 
-import '../../constants/colors.dart';
 import '../../screens/actor_detail_screen.dart';
-import '../actor_detail_screen_item_views/actor_detail_screen_item_views.dart';
+
 
 class ActorSlider extends StatelessWidget {
   const ActorSlider({super.key});
@@ -31,7 +32,7 @@ class ActorSlider extends StatelessWidget {
           child: Stack(
               children: [Container(
                 width: MediaQuery.of(context).size.width,
-                margin: const EdgeInsets.symmetric(horizontal: 10),
+                margin: const EdgeInsets.symmetric(horizontal: kSP10x),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20)
                 ),
@@ -65,13 +66,13 @@ class ActorSlider extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
+                const Padding(
+                  padding: EdgeInsets.only(bottom: kSP10x),
                   child: Align(
                     alignment: Alignment.bottomCenter,
-                    child: Text('Gary Oldman',style: TextStyle(
+                    child: Text(kGaryOldManText,style: TextStyle(
                       color: Colors.white,
-                      fontSize: 18,
+                      fontSize: kFS18x,
                       fontWeight: FontWeight.bold,
                     ),),
                   ),

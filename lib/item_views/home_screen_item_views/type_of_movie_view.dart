@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app_poc/constants/dimens.dart';
 
 import '../../constants/colors.dart';
 
@@ -16,7 +17,7 @@ class TypesOfMovies extends StatelessWidget {
     return SizedBox(
       height: 60,
       child: ListView.builder(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(kSP10x),
           scrollDirection: Axis.horizontal,
           itemCount: movieType.length,
           itemBuilder: (context,int index) {
@@ -24,22 +25,22 @@ class TypesOfMovies extends StatelessWidget {
               return Container(
                 width: 100,
                 alignment: Alignment.center,
-                margin: const EdgeInsets.symmetric(horizontal: 10),
+                margin: const EdgeInsets.symmetric(horizontal: kSP10x),
                 decoration: BoxDecoration(
                   color: kSecondaryColor,
                   borderRadius: BorderRadius.circular(5)
                 ),
                 child: Text(movieType[index],style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 15
+                  fontSize: kFS15x
               ),),
               );
             }return Container(
               alignment: Alignment.center,
-              margin: const EdgeInsets.symmetric(horizontal: 10),
+              margin: const EdgeInsets.symmetric(horizontal: kSP10x),
               child: Text(movieType[index],style: const TextStyle(
                 color: Colors.white,
-                fontSize: 15
+                fontSize: kFS15x
               ),),
             );
           })

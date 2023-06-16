@@ -1,16 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_app_poc/constants/dimens.dart';
 
 import '../../constants/colors.dart';
 
 class FirstSlider extends StatelessWidget {
-   const FirstSlider({super.key,});
-  // final urlImages = [
-  //   "https://image.tmdb.org/t/p/original/fFZGJQU2LcViBC5SAwYrxHRvBW9.jpg",
-  //   "https://image.tmdb.org/t/p/original/lI2jPbssax6XX5vDqB9mTJHGzfH.jpg",
-  //   "https://image.tmdb.org/t/p/original/8XZI9QZ7Pm3fVkigWJPbrXCMzjq.jpg"
-  // ];
+    const FirstSlider({super.key,});
+
 
   @override
   Widget build(BuildContext context) {
@@ -28,14 +25,15 @@ class FirstSlider extends StatelessWidget {
       ),
       items: [1,2,3,4,5].map((e) {
         return Stack(
-            children: [Container(
+            children: [
+              Container(
               width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.symmetric(horizontal: 10),
+              margin: const EdgeInsets.symmetric(horizontal: kSP10x),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20)
               ),
               child: CachedNetworkImage(
-                imageUrl:'https://image.tmdb.org/t/p/original/lI2jPbssax6XX5vDqB9mTJHGzfH.jpg',
+                imageUrl:'https://image.tmdb.org/t/p/original/8DR3g1cF1mqpi6Jd5Yx1oOnLnqD.jpg',
                 imageBuilder: (context, imageProvider) => Container(
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(30)),
@@ -62,10 +60,9 @@ class FirstSlider extends StatelessWidget {
                 ),
               ),
               Container(
-                width: MediaQuery.of(context).size.width,
                 height: 400,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(20),
                   gradient: const LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,

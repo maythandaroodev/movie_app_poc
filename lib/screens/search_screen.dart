@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app_poc/constants/colors.dart';
+import 'package:movie_app_poc/constants/dimens.dart';
+
+import '../constants/strings.dart';
 
 
 class SearchScreen extends StatelessWidget {
@@ -8,55 +11,55 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: kPrimaryColor,
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 60,right: 280),
+            padding: const EdgeInsets.only(top: kSP60x,right: kSP280x),
             child: TextButton.icon(
                 onPressed: (){
                   Navigator.pop(context);
                 },
                 icon: const Icon(Icons.arrow_back_ios_new_outlined,color: kSecondaryColor,),
-                label: const Text('Back',style: TextStyle(
+                label: const Text(kBackText,style: TextStyle(
                   color: kSecondaryColor,
                 ),)),
           ),
           Row(
             children: [
-              SizedBox(width: 10,),
+              const SizedBox(width: kSP10x,),
               Expanded(
                   child: TextField(
                 autofocus: true,
-                style: TextStyle(
-                  color: Colors.white
+                style: const TextStyle(
+                  color: kWhiteColor
                 ),
                     decoration: InputDecoration(
-                      hintText: "Search movies...",
-                      hintStyle: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 18,
+                      hintText: kHintText,
+                      hintStyle: const TextStyle(
+                        color: kGreyColor,
+                        fontSize: kFS18x,
                       ),
                       filled: true,
                       fillColor: kSearchBoxColor,
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(kSearchBoxBorderRadius),
                         borderSide: BorderSide.none
                       ),
                       )
                     ),
               ),
-              SizedBox(width: 20,),
+              const SizedBox(width: kSP20x,),
               Container(
-                width: 60,
-                height: 60,
+                width: kSearchBtnWidth,
+                height: kSearchBtnHeight,
                 decoration: BoxDecoration(
                     color: kSecondaryColor,
-                    borderRadius: BorderRadius.circular(10)
+                    borderRadius: BorderRadius.circular(kSearchBtnRadius)
                 ),
-                child: const Icon(Icons.search,color: Colors.white,size: 35,),
+                child: const Icon(Icons.search,color: kWhiteColor,size: kSearchIconSize,),
               ),
-              SizedBox(width: 10,),
+              const SizedBox(width: kSP10x,),
             ],
           )
         ],

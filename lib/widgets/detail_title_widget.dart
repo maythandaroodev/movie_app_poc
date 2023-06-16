@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app_poc/constants/colors.dart';
+
+import '../constants/dimens.dart';
 
 class DetailTitleWidget extends StatelessWidget {
   const DetailTitleWidget({super.key, required this.title, required this.padding, });
@@ -11,9 +14,9 @@ class DetailTitleWidget extends StatelessWidget {
     return Padding(
       padding: padding,
       child: Text(title,style: const TextStyle(
-          color: Colors.white,
+          color: kWhiteColor,
           fontWeight: FontWeight.bold,
-          fontSize: 25
+          fontSize: kFS25x
       ),),
     );
   }

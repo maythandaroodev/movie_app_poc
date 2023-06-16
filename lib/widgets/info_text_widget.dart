@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app_poc/constants/colors.dart';
+import 'package:movie_app_poc/constants/dimens.dart';
 
 class InfoTextWidget extends StatelessWidget {
   const InfoTextWidget({super.key, required this.infoText, required this.padding});
@@ -10,8 +12,8 @@ class InfoTextWidget extends StatelessWidget {
     return Padding(
       padding: padding,
       child: Text(infoText,style: const TextStyle(
-          color: Colors.grey,
-          fontSize: 17
+          color: kGreyColor,
+          fontSize: kFS17x
       ),),
     );
   }
